@@ -7,6 +7,9 @@ import time
 
 user_agent = 'AMA identifier: v0.2 (by /u/Molag_balls)'
 r = praw.Reddit(user_agent)
+
+#this should point to your oauth config file, you need to create this on your own.
+#See https://github.com/SmBe19/praw-OAuth2Util for more information
 o = OAuth2Util.OAuth2Util(r, configfile="oauthconfig.ini")
 o.refresh(force=True)
 
